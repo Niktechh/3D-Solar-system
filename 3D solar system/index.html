@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.3/tween.umd.js"></script>
+  <title>3D solar system</title>
+</head>
+
+<body>
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="theme-toggle">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div id="top-controls">
+      <button id="pause-resume-btn">Pause</button>
+      <button id="reset-camera-btn">Reset View</button>
+  </div>
+  <div id="loading-screen">
+    <div id="lottie-container"></div>
+    <p id="loading-text">Loading...</p>
+  </div>
+  <div id="planet-label"></div>
+  <button id="toggle-controls-btn" title="Hide controls">
+    <svg id="toggle-icon" viewBox="0 0 24 24" width="24" height="24">
+        <path id="toggle-icon-chevron" d="M6 9l6 6 6-6" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path id="toggle-icon-line" d="M6 18h12" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <div id="time-control-container">
+    <button id="live-btn">LIVE</button>
+    <div class="time-readout">
+      <span id="date-display"></span>
+      <span id="rate-label">REAL RATE</span>
+      <span id="time-display"></span>
+    </div>
+    <input type="range" id="speed-slider" class="styled-slider" min="-2" max="2" value="0" step="0.1" title="Time rate control" />
+  </div>
+
+  <button id="toggle-planet-controls-btn">Planet Speeds</button>
+
+  <div id="planet-controls-container" style="display: none;">
+    <div id="mercury-controls" class="planet-control-panel">
+      <span>Mercury</span>
+      <button class="live-planet-btn" data-planet="mercury">Reset</button>
+      <span class="rate-display" id="mercury-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="mercury-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="venus-controls" class="planet-control-panel">
+      <span>Venus</span>
+      <button class="live-planet-btn" data-planet="venus">Reset</button>
+      <span class="rate-display" id="venus-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="venus-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="earth-controls" class="planet-control-panel">
+      <span>Earth</span>
+      <button class="live-planet-btn" data-planet="earth">Reset</button>
+      <span class="rate-display" id="earth-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="earth-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="mars-controls" class="planet-control-panel">
+      <span>Mars</span>
+      <button class="live-planet-btn" data-planet="mars">Reset</button>
+      <span class="rate-display" id="mars-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="mars-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="jupiter-controls" class="planet-control-panel">
+      <span>Jupiter</span>
+      <button class="live-planet-btn" data-planet="jupiter">Reset</button>
+      <span class="rate-display" id="jupiter-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="jupiter-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="saturn-controls" class="planet-control-panel">
+      <span>Saturn</span>
+      <button class="live-planet-btn" data-planet="saturn">Reset</button>
+      <span class="rate-display" id="saturn-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="saturn-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="uranus-controls" class="planet-control-panel">
+      <span>Uranus</span>
+      <button class="live-planet-btn" data-planet="uranus">Reset</button>
+      <span class="rate-display" id="uranus-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="uranus-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+    <div id="neptune-controls" class="planet-control-panel">
+      <span>Neptune</span>
+      <button class="live-planet-btn" data-planet="neptune">Reset</button>
+      <span class="rate-display" id="neptune-rate">REAL RATE</span>
+      <input type="range" class="styled-slider planet-speed-slider" id="neptune-speed" min="-2" max="2" value="0" step="0.1">
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
