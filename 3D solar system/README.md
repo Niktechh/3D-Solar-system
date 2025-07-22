@@ -75,10 +75,15 @@ Follow these steps to set up and run the project locally:
 ## 📄 Folder Structure
 .
 ├── index.html            // Main HTML file
+
 ├── style.css             // Global styles for the UI
+
 ├── js/                   // JavaScript files
+
 │   └── main.js           // Core Three.js logic and animations
+
 └── img/                  // Image assets (planet textures, skybox)
+
 ├── earth_hd.jpg
 ├── jupiter_hd.jpg
 ├── mars_hd.jpg
