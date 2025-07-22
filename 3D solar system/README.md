@@ -84,22 +84,39 @@ Follow these steps to set up and run the project locally:
 
 └── img/                  // Image assets (planet textures, skybox)
 
+
 ├── earth_hd.jpg
+
 ├── jupiter_hd.jpg
+
 ├── mars_hd.jpg
+
 ├── mercury_hd.jpg
+
 ├── neptune_hd.jpg
+
 ├── saturn_hd.jpg
+
 ├── saturn_ring.jpg
+
 ├── sun_hd.jpg
+
 ├── uranus_hd.jpg
+
 ├── venus_hd.jpg
+
 └── skybox/           // Skybox textures
+
 ├── space_bk.png
+
 ├── space_dn.png
+
 ├── space_ft.png
+
 ├── space_lf.png
+
 ├── space_rt.png
+
 └── space_up.png
 
 
